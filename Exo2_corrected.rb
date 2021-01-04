@@ -10,29 +10,26 @@ All_items = {
 }
 
 Roll_numbers = {
-  678: "Peter",
-  677: "Michel",
-  676: "Martin",
-  675: "Thomas",
-  674: "Richard",
-  673: "Robert"
+  '678': "Peter",
+  '677': "Michel",
+  '676': "Martin",
+  '675': "Thomas",
+  '674': "Richard",
+  '673': "Robert"
 }
 $all_stu = ""
 $rollnumb =" "
 def call_me
   puts "Enter your Rollnumber"
-  $all_stu = gets.chomp.to_i
+  $all_stu = gets.chomp.to_sym
 end
 call_me
 
-Roll_numbers.each do |names, roll_num|
-  $rollnumb = roll_num
-  $names = names
-  if $rollnumb ==  $all_stu
-    All_items.each do |name, marks|
-      if $names == name
-        puts "#{$names} has #{marks}"
-      end
-    end
+name = Roll_numbers[$all_stu]
+
+if name
+  mark = All_items[name.to_sym]
+  if mark
+    puts "#{name} has #{mark}"
   end
 end
