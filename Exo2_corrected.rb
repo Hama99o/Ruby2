@@ -1,6 +1,6 @@
 #allData
 
-All_items = {
+marks = {
   Peter: "80%",
   Michel: "68%",
   Martin: "60%",
@@ -9,7 +9,7 @@ All_items = {
   Robert: "38%"
 }
 
-Roll_numbers = {
+students = {
   '678': "Peter",
   '677': "Michel",
   '676': "Martin",
@@ -17,19 +17,20 @@ Roll_numbers = {
   '674': "Richard",
   '673': "Robert"
 }
-$all_stu = ""
-$rollnumb =" "
+$roll_number = ""
+
 def call_me
   puts "Enter your Rollnumber"
-  $all_stu = gets.chomp.to_sym
+  $roll_number = gets.chomp.to_sym
 end
 call_me
 
-name = Roll_numbers[$all_stu]
+student_name = students[$roll_number]
 
-if name
-  mark = All_items[name.to_sym]
+if student_name
+  mark = marks[student_name.to_sym]
+  
   if mark
-    puts "#{name} has #{mark}"
+    puts "#{student_name} has #{mark}"
   end
 end
