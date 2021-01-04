@@ -10,12 +10,12 @@ All_items = {
 }
 
 Roll_numbers = {
-  Peter: 678,
-  Michel: 677,
-  Martin: 676,
-  Thomas: 675,
-  Richard: 674,
-  Robert: 673
+  678: "Peter",
+  677: "Michel",
+  676: "Martin",
+  675: "Thomas",
+  674: "Richard",
+  673: "Robert"
 }
 $all_stu = ""
 $rollnumb =" "
