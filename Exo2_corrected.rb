@@ -1,6 +1,6 @@
 #allData
 
-All_items = {
+student_percentage= {
   Peter: "80%",
   Michel: "68%",
   Martin: "60%",
@@ -9,30 +9,25 @@ All_items = {
   Robert: "38%"
 }
 
-Roll_numbers = {
-  Peter: 678,
-  Michel: 677,
-  Martin: 676,
-  Thomas: 675,
-  Richard: 674,
-  Robert: 673
+student_roll_numbers = {
+  "678": "Peter",
+  "677": "Michel",
+  "676": "Martin",
+  "675": "Thomas",
+  "674": "Richard",
+  "673": "Robert"
 }
-$all_stu = ""
-$rollnumb =" "
-def call_me
-  puts "Enter your Rollnumber"
-  $all_stu = gets.chomp.to_i
-end
-call_me
 
-Roll_numbers.each do |names, roll_num|
-  $rollnumb = roll_num
-  $names = names
-  if $rollnumb ==  $all_stu
-    All_items.each do |name, marks|
-      if $names == name
-        puts "#{$names} has #{marks}"
-      end
-    end
-  end
+def main
+puts "Enter your roll number"
+$get_roll_number = gets.chomp.to_sym
+end
+main
+student_name = student_roll_numbers[$get_roll_number]
+
+if student_name
+  percentage = student_percentage[student_name.to_sym]
+  if percentage
+  puts "#{student_name} has #{percentage}"
+end
 end

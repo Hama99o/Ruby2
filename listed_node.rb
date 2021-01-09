@@ -1,0 +1,1 @@
+node = Node.new("Hama")
