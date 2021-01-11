@@ -4,7 +4,7 @@ def pattern(n)
   n_array = (1..n).to_a
   $use = n
   space = " "
-  ho = n_array.length.to_i
+  ho = n_array.length
   length_of_array = ho -1
   allspace = space * length_of_array
   up = (1..n-1).map {|x| (x % 10)}
