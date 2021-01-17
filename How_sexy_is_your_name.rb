@@ -5,7 +5,6 @@
 
 
 def sexy_name(name)
-  #calculate the sexy get_lettersame score aget_lettersd returget_letters the sexy score raget_letterskiget_lettersg
   names = name.upcase.delete(" ")
   $letters = names.split("").map do |s|
     $SCORES[s]

@@ -1,12 +1,6 @@
-def solution(n)
-  case n
-  when n == 7
-    4
-  when n == 4
-    77
-  else
-    false
-  end
+def red_knight(n, p)
+
 end
 
-p solution(5)
+p red_knight(1, 5) # ['White', 10])
+p red_knight(1, 6) #['Black', 12])
